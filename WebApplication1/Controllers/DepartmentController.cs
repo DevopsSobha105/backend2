@@ -32,8 +32,8 @@ namespace WebApplication1.Controllers
                             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = Environment.GetEnvironmentVariable("SqlConnectionString");
-            //string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
+            //string sqlDataSource = Environment.GetEnvironmentVariable("SqlConnectionString");
+            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
 
             SqlDataReader myReader;
             using(SqlConnection myCon=new SqlConnection(sqlDataSource))
